@@ -1,0 +1,13 @@
+{
+  "name": "volley-race",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Volley Race online: juego multijugador de aula accesible desde cualquier navegador",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
