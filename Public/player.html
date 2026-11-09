@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Volley Race · Jugador</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="player-body">
+  <main class="phone-shell">
+    <section id="joinView" class="mobile-card">
+      <div class="ball-logo">🏐</div>
+      <div class="eyebrow center">VOLLEY RACE</div>
+      <h1>Entra a la carrera</h1>
+      <form id="joinForm">
+        <label for="code">Código de sala</label>
+        <input id="code" name="code" maxlength="5" autocomplete="off" inputmode="text" placeholder="ABCDE" required />
+        <label for="name">Tu nombre</label>
+        <input id="name" name="name" maxlength="18" autocomplete="nickname" placeholder="Ej: Diego" required />
+        <button class="btn primary full" type="submit">Entrar</button>
+      </form>
+      <p id="joinError" class="form-error" aria-live="polite"></p>
+    </section>
+
+    <section id="waitingView" class="mobile-card hidden center">
+      <div class="mini-ball">🏐</div>
+      <div class="eyebrow">YA ESTÁS DENTRO</div>
+      <h1 id="welcomeName">Jugador</h1>
+      <p>Espera a que el profesor inicie la carrera.</p>
+      <div class="waiting-dots"><span></span><span></span><span></span></div>
+      <div class="mobile-stat">Puntos <strong id="myScore">0</strong></div>
+    </section>
+
+    <section id="playingView" class="mobile-card hidden center">
+      <div class="eyebrow">CARRERA EN CURSO</div>
+      <h1 id="raceName">Jugador</h1>
+      <div class="big-ball" id="bigBall">🏐</div>
+      <div class="progress-shell"><div id="myProgress" class="progress-bar"></div></div>
+      <div id="myProgressText" class="progress-label">0%</div>
+      <p id="momentText">¡Vamos!</p>
+    </section>
+
+    <section id="finishedView" class="mobile-card hidden center">
+      <div class="trophy" id="trophy">🏆</div>
+      <div class="eyebrow">TERMINASTE</div>
+      <h1 id="placeText">1° lugar</h1>
+      <p id="pointsText">+20 puntos</p>
+      <div class="mobile-stat">Puntaje total <strong id="finalScore">0</strong></div>
+      <p class="muted">Mira la pantalla principal para ver el podio.</p>
+    </section>
+  </main>
+
+  <script src="/player.js"></script>
+</body>
+</html>

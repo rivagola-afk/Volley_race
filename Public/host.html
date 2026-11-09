@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Volley Race · Profesor</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="host-body">
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">JUEGO DE AULA</div>
+      <h1>🏐 VOLLEY RACE</h1>
+    </div>
+    <div class="round-pill">Ronda <strong id="roundNum">0</strong></div>
+  </header>
+
+  <main class="host-grid">
+    <section class="stage-card">
+      <div id="lobbyView" class="view">
+        <div class="join-panel">
+          <div>
+            <div class="eyebrow">CÓDIGO DE SALA</div>
+            <div id="roomCode" class="room-code">-----</div>
+            <div id="joinUrl" class="join-url">Cargando dirección…</div>
+          </div>
+          <div class="qr-wrap"><img id="qr" alt="Código QR para ingresar" /></div>
+        </div>
+
+        <div class="lobby-head">
+          <div>
+            <h2>Jugadores conectados</h2>
+            <p>Escaneen el QR desde cualquier conexión a Internet, escriban su nombre y aparecerán aquí.</p>
+          </div>
+          <div id="playerCount" class="count-badge">0 / 20</div>
+        </div>
+        <div id="playersGrid" class="players-grid"></div>
+      </div>
+
+      <div id="raceView" class="view hidden">
+        <div class="court-header">
+          <div>
+            <div class="eyebrow">EN VIVO</div>
+            <h2 id="raceTitle">¡A correr!</h2>
+          </div>
+          <div class="legend"><span>Salida</span><span>🏐 RED</span><span>Meta</span></div>
+        </div>
+        <div id="raceTrack" class="race-track"></div>
+      </div>
+
+      <div id="resultsView" class="view hidden">
+        <div class="results-title">
+          <div class="eyebrow">RESULTADOS</div>
+          <h2>Podio de la ronda</h2>
+        </div>
+        <div id="podium" class="podium"></div>
+        <div class="scoreboard-wrap">
+          <h3>Clasificación general</h3>
+          <div id="scoreboard" class="scoreboard"></div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="control-card">
+      <div>
+        <div class="eyebrow">CONTROL DEL PROFESOR</div>
+        <h2>Partida</h2>
+      </div>
+      <button id="startBtn" class="btn primary">▶ Iniciar carrera</button>
+      <button id="lobbyBtn" class="btn secondary" disabled>↩ Volver al lobby</button>
+      <button id="resetBtn" class="btn ghost">⟳ Reiniciar puntajes</button>
+      <div class="tip-card">
+        <strong>Cómo funciona</strong>
+        <p>Las pelotas avanzan automáticamente. Los alumnos pueden entrar desde Wi‑Fi o datos móviles; no necesitan instalar ninguna app.</p>
+      </div>
+      <div id="statusText" class="status-text">Creando sala…</div>
+    </aside>
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="/host.js"></script>
+</body>
+</html>
